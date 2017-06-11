@@ -17,9 +17,9 @@ var obstacles = [
 function gridGenerator (obstacles) {
   var myGrid=[[]];
     for (var i=0; i<10; i++) {
-      myGrid[i]=[0];
+      myGrid[i]=["0"];
       for (var j=0; j<10; j++) {
-        myGrid[i][j]=0;
+        myGrid[i][j]="0";
       }
     }
 
@@ -157,6 +157,7 @@ function avoidTheMate (rover,eve,flag) {
   myGrid= posGrid(rover, flag);
 }
 
+
 myGrid= gridGenerator(obstacles);
 doInstructions("ffffffffrffff", myRover);
 moveRover(myRover, obstacles,"r");
@@ -166,5 +167,5 @@ avoidTheMate(myRover,myEve,"r");
 
 
 console.log("New Rover Position: [" + myRover.position[0] + ", " + myRover.position[1] + "]");
-console.log("New Rover Position: [" + myEve.position[0] + ", " + myEve.position[1] + "]");
+console.log("New Eve Position: [" + myEve.position[0] + ", " + myEve.position[1] + "]");
 console.log(myGrid);
